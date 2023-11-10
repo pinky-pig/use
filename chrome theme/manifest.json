@@ -15,24 +15,45 @@
     //   "theme_ntp_background": "images/theme_ntp_background.jpeg"
     // },
     "colors": {
-      // 定义浏览器窗口框架的颜色。
+      // 浏览器窗口框架的颜色。
       "frame": [3, 6, 20],
-      // 定义浏览器工具栏的颜色。
+      // 窗口未被选中的时候的颜色。
+      "frame_inactive": [3, 6, 20],
+      "frame_incognito": [0, 0, 0],
+      "frame_incognito_inactive": [0, 0, 0],
+
+      // 浏览器工具栏的颜色。
       "toolbar": [37, 40, 53],
-      // 定义标签页文本的颜色。
+      
+      // 当前选中的标签页文本的颜色。
       "tab_text": [255, 255, 255],
-      // 定义标签页背景文本的颜色。
+      // 未被选中的标签页文本的颜色。
       "tab_background_text": [255, 255, 255],
-      // 定义书签文本的颜色。
+      "tab_background_text_inactive":[170,170,170],
+      "tab_background_text_incognito":[170,170,170],
+      "tab_background_text_incognito_inactive":[170,170,170],
+      
+      // 书签文本的颜色。
       "bookmark_text": [255, 255, 255],
-      // 定义新标签页背景的颜色。
-      "ntp_background": [255, 255, 255],
-      // 定义新标签页文本的颜色。
-      "ntp_text": [50, 50, 50],
-      // 定义新标签页链接的颜色。
-      "ntp_link": [6, 55, 116],
+
       // 定义按钮背景的颜色。
-      "button_background": [0, 0, 0, 0]
+      "button_background": [37, 40, 53, 0],
+      "control_background": [0, 0, 0],
+      "ntp_background": [0, 0, 0],
+      "ntp_header": [0, 0, 0],
+      "ntp_link": [0, 0, 0],
+      "ntp_link_underline": [0, 0, 0],
+      "ntp_section": [0, 0, 0],
+      "ntp_section_link": [0, 0, 0],
+      "ntp_section_link_underline": [0, 0, 0],
+      "ntp_section_text": [0, 0, 0],
+      "ntp_text": [0, 0, 0],
+
+
+      "background_tab":[0,0,0], 
+      "background_tab_inactive":[0,0,0], 
+      "background_tab_incognito":[0,0,0], 
+      "background_tab_incognito_inactive":[0,0,0]
     },
     "tints": {
       // 定义按钮颜色的变化。
@@ -42,7 +63,8 @@
       // 定义新标签页背景的对齐方式。
       "ntp_background_alignment": "top",
       // 定义新标签页背景的重复方式。
-      "ntp_background_repeat": "no-repeat"
+      "ntp_background_repeat": "no-repeat",
+      "ntp_logo_alternate": 0
     }
   }
 }
