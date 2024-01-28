@@ -3,24 +3,25 @@
 </script>
 
 <template>
-  <div class="content-container border-[2px] border-[#457AF7] rounded-md border-solid bg-[var(--cover-main-color)] px-4 py-8 dark:border-[#474d63]">
-    <span class="pointer-events-none absolute inset-0 m-[10px] select-none border-2 border-[#457AF7] border-dashed opacity-100 dark:border-[#474d63]">
-      <span class="absolute h-1.5 w-1.5 border border-[#457AF7] bg-[#457AF7] -left-0.5 -top-0.5" />
-      <span class="absolute h-1.5 w-1.5 border border-[#457AF7] bg-[#457AF7] -right-0.5 -top-0.5" />
-      <span class="absolute h-1.5 w-1.5 border border-[#457AF7] bg-[#457AF7] -bottom-0.5 -left-0.5" />
-      <span class="absolute h-1.5 w-1.5 select-none border border-[#457AF7] bg-[#457AF7] -bottom-0.5 -right-0.5" />
+  <div class="content-container w-[600px] h-[400px] border-[2px] border-[#ffffff] rounded-md border-solid bg-[var(--cover-main-color)] px-4 py-8 ">
+    
+    <span class="pointer-events-none absolute inset-0 m-[16px] select-none opacity-100 ">
+      <span class="absolute h-2.5 w-2.5 border border-[#457AF7] bg-[#457AF7] -left-1.5 -top-1.5" />
+      <span class="absolute h-2.5 w-2.5 border border-[#457AF7] bg-[#457AF7] -right-1.5 -top-1.5" />
+      <span class="absolute h-2.5 w-2.5 border border-[#457AF7] bg-[#457AF7] -bottom-1.5 -left-1.5" />
+      <span class="absolute h-2.5 w-2.5 select-none border border-[#457AF7] bg-[#457AF7] -bottom-1.5 -right-1.5" />
 
-      <!-- <span class="absolute h-200% w-1px select-none border border-[#457AF7] border-dashed -left-0.5 -top-1/2" />
-      <span class="absolute h-200% w-1px select-none border border-[#457AF7] border-dashed -right-0.5 -top-1/2" />
-      <span class="absolute h-1px w-200% select-none border border-[#457AF7] border-dashed -left-1/2 -top-0.5" />
-      <span class="absolute h-1px w-200% select-none border border-[#457AF7] border-dashed -bottom-0.5 -right-1/2" /> -->
+      <span class="absolute h-[calc(100%_+_72px)] w-1px select-none border border-[#457AF7] border-dashed -left-0.5 -top-[36px]" />
+      <span class="absolute h-[calc(100%_+_72px)] w-1px select-none border border-[#457AF7] border-dashed -right-0.5 -top-[36px]" />
+      <span class="absolute h-1px w-[calc(100%_+_72px)] select-none border border-[#457AF7] border-dashed -left-[36px] -top-0.5" />
+      <span class="absolute h-1px w-[calc(100%_+_72px)] select-none border border-[#457AF7] border-dashed -bottom-0.5 -right-[36px]" />
     </span>
 
-    <div class="text-[36px] text-[#c29048] font-bold leading-normal font-[fantasy]">
+    <div class="text-[36px] text-[#c29048] font-bold leading-normal ">
       My default cover
     </div>
 
-    <div class="text-[24px] text-[#ffffff] font-bold leading-normal tracking-widest font-[fantasy]">
+    <div class="text-[24px] text-[#ffffff] font-bold leading-normal tracking-widest ">
       {{ `< Arvin  /> ` }}
     </div>
   </div>
@@ -34,7 +35,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/noise-light.png);
+  /* background-image: url(/noise-light.png); */
   background-repeat: repeat;
   pointer-events: none;
   -webkit-user-select: none;
