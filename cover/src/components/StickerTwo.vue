@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="flex flex-row justify-center items-center text-[36px] text-white font-bold italic">
+  <div class="flex flex-row justify-center items-center text-[36px] text-white font-bold italic select-none">
     <span>
       {{ '<' }}&nbsp;
     </span>

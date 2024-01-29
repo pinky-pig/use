@@ -1,18 +1,159 @@
 <script setup lang="ts">
-import CoverContent from './Content.vue'
+import { ref } from 'vue'
+import { useWindowSize, useMagicKeys } from '@vueuse/core'
+import { useDraggable, Position } from '@vueuse/core'
+import StickerContent from './StickerContent.vue'
 import StickerOne from './StickerOne.vue'
 import StickerTwo from './StickerTwo.vue'
 import StickerThree from './StickerThree.vue'
 import StickerFour from './StickerFour.vue'
+
+const { width, height } = useWindowSize()
+const { ctrl } = useMagicKeys()
+
+const stickerContentRef = ref<HTMLElement | null>(null)
+const { style: stickerContentStyle } = useDraggable(stickerContentRef, {
+  initialValue: { x: 40, y: 40 },
+  onStart: () => {
+    if (!ctrl.value) {
+      return false;
+    }
+  },
+  onMove: (position: Position) => {
+    if (position.x > width.value - 40) {
+      position.x = width.value - 40
+    }
+    if (position.x < 0) {
+      position.x = 0
+    }
+    if (position.y > height.value - 40) {
+      position.y = height.value - 40
+    }
+    if (position.y < 0) {
+      position.y = 0
+    }
+  }
+})
+
+const stickerOneRef = ref<HTMLElement | null>(null)
+const { style: stickerOneStyle } = useDraggable(stickerOneRef, {
+  initialValue: { x: 40, y: 40 },
+  onStart: () => {
+    if (!ctrl.value) {
+      return false;
+    }
+  },
+  onMove: (position: Position) => {
+    if (position.x > width.value - 40) {
+      position.x = width.value - 40
+    }
+    if (position.x < 0) {
+      position.x = 0
+    }
+    if (position.y > height.value - 40) {
+      position.y = height.value - 40
+    }
+    if (position.y < 0) {
+      position.y = 0
+    }
+  }
+})
+
+const stickerTwoRef = ref<HTMLElement | null>(null)
+const { style: stickerTwoStyle } = useDraggable(stickerTwoRef, {
+  initialValue: { x: 40, y: 40 },
+  onStart: () => {
+    if (!ctrl.value) {
+      return false;
+    }
+  },
+  onMove: (position: Position) => {
+    if (position.x > width.value - 40) {
+      position.x = width.value - 40
+    }
+    if (position.x < 0) {
+      position.x = 0
+    }
+    if (position.y > height.value - 40) {
+      position.y = height.value - 40
+    }
+    if (position.y < 0) {
+      position.y = 0
+    }
+  }
+})
+const stickerThreeRef = ref<HTMLElement | null>(null)
+const { style: stickerThreeStyle } = useDraggable(stickerThreeRef, {
+  initialValue: { x: 40, y: 40 },
+  onStart: () => {
+    if (!ctrl.value) {
+      return false;
+    }
+  },
+  onMove: (position: Position) => {
+    if (position.x > width.value - 40) {
+      position.x = width.value - 40
+    }
+    if (position.x < 0) {
+      position.x = 0
+    }
+    if (position.y > height.value - 40) {
+      position.y = height.value - 40
+    }
+    if (position.y < 0) {
+      position.y = 0
+    }
+  }
+})
+
+const stickerFourRef = ref<HTMLElement | null>(null)
+const { style: stickerFourStyle } = useDraggable(stickerFourRef, {
+  initialValue: { x: 40, y: 40 },
+  onStart: () => {
+    if (!ctrl.value) {
+      return false;
+    }
+  },
+  onMove: (position: Position) => {
+    if (position.x > width.value - 40) {
+      position.x = width.value - 40
+    }
+    if (position.x < 0) {
+      position.x = 0
+    }
+    if (position.y > height.value - 40) {
+      position.y = height.value - 40
+    }
+    if (position.y < 0) {
+      position.y = 0
+    }
+  }
+})
+
 </script>
 
 <template>
   <div class="cover-container relative h-full w-full overflow-hidden bg-[var(--cover-main-color)]">
-    <CoverContent class="absolute top-1/2 -translate-y-1/2 left-4" />
-    <StickerOne class="absolute top-1/2 -translate-y-1/2 right-4"></StickerOne>
-    <StickerTwo class="absolute left-1/2 -translate-x-1/2 top-4"></StickerTwo>
-    <StickerThree class="absolute left-2/3 -translate-x-1/2 top-4"></StickerThree>
-    <StickerFour class="absolute top-2/3 -translate-y-1/2 left-4"></StickerFour>
+    <div ref="stickerContentRef" :style="stickerContentStyle" class="fixed">
+      <StickerContent />
+    </div>
+
+    <div ref="stickerOneRef" :style="stickerOneStyle" class="fixed">
+      <StickerOne></StickerOne>
+    </div>
+
+    <div ref="stickerTwoRef" :style="stickerTwoStyle" class="fixed">
+      <StickerTwo></StickerTwo>
+    </div>
+
+
+    <div ref="stickerThreeRef" :style="stickerThreeStyle" class="fixed">
+      <StickerThree></StickerThree>
+    </div>
+
+    <div ref="stickerFourRef" :style="stickerFourStyle" class="fixed">
+      <StickerFour></StickerFour>
+    </div>
 
   </div>
 </template>
@@ -35,7 +176,7 @@ import StickerFour from './StickerFour.vue'
   background-color: linear-gradient(82deg, #4c8bff, #f27d7d, #1f65fe);
 }
 
-.cover-container::after{
+.cover-container::after {
   content: '';
   position: absolute;
   pointer-events: none;
