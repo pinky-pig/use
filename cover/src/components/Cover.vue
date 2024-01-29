@@ -8,6 +8,8 @@ import StickerTwo from './StickerTwo.vue'
 import StickerThree from './StickerThree.vue'
 import StickerFour from './StickerFour.vue'
 
+import { ResizeCard, ResizeCardContent } from './resize-card'
+
 const { width, height } = useWindowSize()
 const { ctrl } = useMagicKeys()
 
@@ -135,11 +137,19 @@ const { style: stickerFourStyle } = useDraggable(stickerFourRef, {
 <template>
   <div class="cover-container relative h-full w-full overflow-hidden bg-[var(--cover-main-color)]">
     <div ref="stickerContentRef" :style="stickerContentStyle" class="fixed">
-      <StickerContent />
+      <ResizeCard>
+        <ResizeCardContent>
+          <StickerContent />
+        </ResizeCardContent>
+      </ResizeCard>
     </div>
 
     <div ref="stickerOneRef" :style="stickerOneStyle" class="fixed">
-      <StickerOne></StickerOne>
+      <ResizeCard>
+        <ResizeCardContent>
+          <StickerOne />
+        </ResizeCardContent>
+      </ResizeCard>
     </div>
 
     <div ref="stickerTwoRef" :style="stickerTwoStyle" class="fixed">
@@ -152,8 +162,13 @@ const { style: stickerFourStyle } = useDraggable(stickerFourRef, {
     </div>
 
     <div ref="stickerFourRef" :style="stickerFourStyle" class="fixed">
-      <StickerFour></StickerFour>
+      <ResizeCard>
+        <ResizeCardContent>
+          <StickerFour />
+        </ResizeCardContent>
+      </ResizeCard>
     </div>
+
 
   </div>
 </template>

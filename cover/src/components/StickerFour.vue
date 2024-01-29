@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <div class="sticker-container rounded-md w-[250px] h-[170px]  bg-white p-[6px] text-[var(--cover-main-color)] ">
+  <div class="sticker-container rounded-md w-full h-full bg-white p-[6px] text-[var(--cover-main-color)] ">
     <div class="box pointer-events-none h-full w-full flex flex-col items-center justify-center rounded-md bg-[var(--cover-main-color)] text-center font-bold ">
       <!-- 椭圆 -->
       <div class="grid w-full flex-1 flex-shrink-0 place-items-center px-[20px]">
-        <div class="h-4/5 w-full rounded-[100%] bg-white text-[36px] leading-[60px] ">
+        <div contenteditable class="h-4/5 w-full rounded-[100%] bg-white text-[36px] leading-[60px] flex justify-center items-center">
           {{ `Arvin` }}
         </div>
       </div>

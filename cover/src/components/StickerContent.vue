@@ -1,23 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useResizeObserver } from '@vueuse/core'
-
-const text = ref("My default cover");
 
 
-const el = ref(null)
-useResizeObserver(el, (entries) => {
-  const entry = entries[0]
-  const { width, height } = entry.contentRect
-  text.value = `width: ${width}, height: ${height}`
-})
+
 
 
 </script>
 
 <template>
   <div
-    class="content-container w-fit h-fit border-[2px] border-[#ffffff] rounded-md border-solid bg-[var(--cover-main-color)] px-4 py-8 ">
+    class="content-container w-full h-full border-[2px] border-[#ffffff] rounded-md border-solid bg-[var(--cover-main-color)] px-4 py-8 flex flex-col ">
 
     <!-- 线条 -->
     <span class="pointer-events-none absolute inset-0 m-[16px] select-none opacity-100 ">
@@ -37,8 +28,11 @@ useResizeObserver(el, (entries) => {
     </span>
 
     <!-- 输入框 -->
-    <div class="mx-[10px] text-[36px] text-[#c29048] font-bold leading-normal ">
-      <textarea ref="el" class="resize bg-[var(--cover-main-color)] focus-within:outline-none" v-text="text" />
+    <div class="w-full h-fit ml-[10px] mr-[10px] text-[36px] text-[#c29048] font-bold leading-normal ">
+      <span contenteditable>{{ 'Arvin' }}</span>
+    </div>
+    <div class="w-full flex-1 mx-[10px] text-[34px] text-[#ffffff] font-bold leading-normal ">
+      <textarea class="w-full h-full resize-none bg-[var(--cover-main-color)] focus-within:outline-none" v-text="'Arvin'" />
     </div>
   </div>
 </template>

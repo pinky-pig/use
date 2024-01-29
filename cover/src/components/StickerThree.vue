@@ -9,12 +9,12 @@
     class="box pointer-events-none h-full w-full flex flex-col items-center justify-center rounded-md bg-[#020661] text-center font-bold border-[#457af7] border border-solid text-transparent ">
       <!-- 椭圆 -->
       <div class="grid w-full flex-1 flex-shrink-0 place-items-center px-[20px] ">
-        <div class="h-[80%] w-full rounded-[100%] bg-transparent text-[36px] leading-[60px] border border-[#457af7]">
+        <div contenteditable class="h-[80%] w-full rounded-[100%] bg-transparent text-[36px] leading-[60px] border border-[#457af7] flex justify-center items-center">
           {{ `Arvin` }}
         </div>
       </div>
       <!-- 描述 -->
-      <div class="h-1/4 max-h-[42px] w-full flex-shrink-0 border-t border-[#457af7] rounded-b-md  border-solid bg-transparent p-[2px] ">
+      <div contenteditable class="h-1/4 max-h-[42px] w-full flex-shrink-0 border-t border-[#457af7] rounded-b-md  border-solid bg-transparent p-[2px] flex justify-center items-center">
         mmeme.me
       </div>
     </div>
