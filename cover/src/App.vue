@@ -5,7 +5,12 @@ import Cover from './components/Cover.vue'
 
 <template>
   <div class="w-screen h-screen">
-    <!-- <MoneyCard></MoneyCard> -->
+    <!-- <MoneyCard
+      align="right"
+      rotate-mode="right"
+      :align-offset=" 160 "
+      :top-offset=" -190"
+    /> -->
     <Cover></Cover>
   </div>
 </template>
