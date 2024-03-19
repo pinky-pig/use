@@ -112,8 +112,7 @@ export const RESUME_DATA = {
           text: [
             ` 1. 使用 Vue2 以及 Element UI 作为开发框架和组件库。`,
             ` 2. 使用开源轮子开发管理系统模块功能。 `,
-            ` 3. 使用 HTML5 Draggable 属性自定义拖拽布局及保存使用。 `,
-            ` 4. 原生开发拖拽碰撞排序。 `,
+            ` 3. 使用 HTML5 Draggable 属性自定义拖拽布局及保存使用，和拖拽碰撞排序。`,
           ],
         },
         
