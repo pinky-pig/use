@@ -77,14 +77,23 @@ export default function Page() {
               ))}
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+              {RESUME_DATA.contact.tel ? (
+                <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                  手机号：
+                  <span className="underline">{RESUME_DATA.contact.tel}</span>
+                </a>
+              ) : null}
               {RESUME_DATA.contact.email ? (
                 <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                  邮箱：
                   <span className="underline">{RESUME_DATA.contact.email}</span>
                 </a>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <span className="underline">{RESUME_DATA.contact.tel}</span>
+              
+              {RESUME_DATA.contact.personalWebsiteUrl ? (
+                <a href={`${RESUME_DATA.contact.personalWebsiteUrl}`}>
+                  个人网站：
+                  <span className="underline">{RESUME_DATA.contact.personalWebsiteUrl}</span>
                 </a>
               ) : null}
             </div>
