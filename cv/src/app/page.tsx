@@ -90,6 +90,12 @@ export default function Page() {
                 </a>
               ) : null}
               
+              {RESUME_DATA.contact.cvUrl ? (
+                <a href={`${RESUME_DATA.contact.cvUrl}`}>
+                  简历网站：
+                  <span className="underline">{RESUME_DATA.contact.cvUrl}</span>
+                </a>
+              ) : null}
               {RESUME_DATA.contact.personalWebsiteUrl ? (
                 <a href={`${RESUME_DATA.contact.personalWebsiteUrl}`}>
                   个人网站：
@@ -222,9 +228,10 @@ export default function Page() {
 
       <CommandMenu
         links={[
+       
           {
-            url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website",
+            url: RESUME_DATA.contact.cvUrl,
+            title: "简历网站",
           },
           ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
             url: socialMediaLink.url,
