@@ -1,7 +1,11 @@
 {
   "contributes": {
     "prefix": "contributes",
-    "body": ["\"contributes\": {", "    $2", "},"],
+    "body": [
+      "\"contributes\": {",
+      "    $2",
+      "},"
+    ],
     "description": "vscode contributes"
   },
   "configuration": {

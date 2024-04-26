@@ -1,11 +1,24 @@
 {
-  "class": {
-    "prefix": "class",
-    "body": ["class=\"${1: }\""],
-    "description": "class"
+  "vd": {
+    "prefix": "vd",
+    "body": [
+      "<script setup lang=\"ts\">",
+      "",
+      "</script>",
+      "",
+      "<template>",
+      "  vue",
+      "</template>",
+      "",
+      "<style scoped>",
+      "",
+      "</style>",
+      "",
+    ],
+    "description": "Arvin's Vue3 template"
   },
-  "vue2": {
-    "prefix": "vue2",
+  "vd2": {
+    "prefix": "vd2",
     "body": [
       "<template>",
       "    <div class=\"main\">\n",
@@ -27,26 +40,49 @@
       "</style>",
       "$2"
     ],
-    "description": "Log output to console"
+    "description": "Arvin's Vue2 template"
   },
   "template": {
     "prefix": "temp",
-    "body": ["<template>", " $1", "</template>"],
+    "body": [
+      "<template>",
+      " $1",
+      "</template>"
+    ],
     "description": "template"
+  },
+  "class": {
+    "prefix": "class",
+    "body": [
+      "class=\"${1: }\""
+    ],
+    "description": "class"
   },
   "onMounted": {
     "prefix": "_mount",
-    "body": ["onMounted(() => {", "  $1", "})"],
+    "body": [
+      "onMounted(() => {",
+      "  $1",
+      "})"
+    ],
     "description": "onMounted"
   },
   "onUnMounted": {
     "prefix": "_unmount",
-    "body": ["onUnmounted(() => {", "  $1", "})"],
+    "body": [
+      "onUnmounted(() => {",
+      "  $1",
+      "})"
+    ],
     "description": "onUnmounted"
   },
   "onUpdated": {
     "prefix": "_update",
-    "body": ["onUpdated(() => {", "  $1", "})"],
+    "body": [
+      "onUpdated(() => {",
+      "  $1",
+      "})"
+    ],
     "description": "onUpdated"
   },
   "setup": {
@@ -87,37 +123,51 @@
   },
   "useAttrs": {
     "prefix": "_useAttrs",
-    "body": ["const attrs = useAttrs()"],
+    "body": [
+      "const attrs = useAttrs()"
+    ],
     "description": "useAttrs"
   },
   "defineProps": {
     "prefix": "_defineProps",
-    "body": ["const props = defineProps<{name:any}>()"],
+    "body": [
+      "const props = defineProps<{name:any}>()"
+    ],
     "description": "defineProps"
   },
   "ref": {
     "prefix": "_ref",
-    "body": ["const $1 = ref(${2})"],
+    "body": [
+      "const $1 = ref(${2})"
+    ],
     "description": "ref"
   },
   "toRef": {
     "prefix": "_toRef",
-    "body": ["const $1 = toRef(state, '$2')"],
+    "body": [
+      "const $1 = toRef(state, '$2')"
+    ],
     "description": "toRef"
   },
   "shallowRef": {
     "prefix": "_shallowRef",
-    "body": ["const $1 = shallowRef(${2})"],
+    "body": [
+      "const $1 = shallowRef(${2})"
+    ],
     "description": "shallowRef"
   },
   "reactive": {
     "prefix": "_reactive",
-    "body": ["const $1 = reactive(${2})"],
+    "body": [
+      "const $1 = reactive(${2})"
+    ],
     "description": "reactive"
   },
   "shallowReactive": {
     "prefix": "_shallowReactive",
-    "body": ["const $1 = shallowReactive(${2})"],
+    "body": [
+      "const $1 = shallowReactive(${2})"
+    ],
     "description": "shallowReactive"
   },
   "effectScope": {
@@ -133,7 +183,9 @@
   },
   "slot": {
     "prefix": "_slot",
-    "body": ["<slot name=\"$1\"></slot>"],
+    "body": [
+      "<slot name=\"$1\"></slot>"
+    ],
     "description": "_slot"
   },
   "ts": {
@@ -148,7 +200,11 @@
   },
   "forloop": {
     "prefix": "forloop",
-    "body": ["for (let i = 0; i < ${1:content}; i++) {", " $2", "}"],
+    "body": [
+      "for (let i = 0; i < ${1:content}; i++) {",
+      " $2",
+      "}"
+    ],
     "description": "for loop"
   },
   "forin": {
@@ -163,17 +219,29 @@
   },
   "forof": {
     "prefix": "forof",
-    "body": ["for (const item of ${1:array}) {", "  $2", "}"],
+    "body": [
+      "for (const item of ${1:array}) {",
+      "  $2",
+      "}"
+    ],
     "description": "for of"
   },
   "forawait": {
     "prefix": "forawait",
-    "body": ["for await (const item of ${1:array) {", "  $2", "}"],
+    "body": [
+      "for await (const item of ${1:array) {",
+      "  $2",
+      "}"
+    ],
     "description": "for await of"
   },
   "scoped": {
     "prefix": "scoped style",
-    "body": ["<style scoped>", "  $1", "</style>"],
+    "body": [
+      "<style scoped>",
+      "  $1",
+      "</style>"
+    ],
     "description": "for await of"
   }
 }
