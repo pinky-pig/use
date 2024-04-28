@@ -8,6 +8,9 @@
 // @grant        none
 // ==/UserScript==
 
+/**
+ * 油猴脚本
+ */
 (function () {
   'use strict'
 
