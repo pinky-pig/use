@@ -1,0 +1,14 @@
+{
+  "name": "arvin-use",
+  "version": "1.0.0",
+  "description": "我的使用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esno": "^4.7.0"
+  }
+}
