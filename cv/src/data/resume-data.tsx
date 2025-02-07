@@ -58,6 +58,37 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: "中国科学院软件研究所 - 智能软件研究中心",
+      link: "https://isrc.iscas.ac.cn/",
+      badges: ["南京"],
+      title: "前端开发工程师",
+      logo: ParabolLogo,
+      start: "2024/010",
+      end: "至今（试用期6个月）",
+      description: ` 考试业务系统和其官网开发 `,
+      content: [
+        {
+          label: '负责重构考试系统',
+          text: [
+            `1. 流水线搭建，CI/CD，代码规范，代码扫描，脚手架规范 `,
+            `2. 系统功能重构 ，优化代码结构，使用 Pinia 状态管理，使用 Vue Router 路由，使用 VueUse 等一系列最新周边生态工具。`,
+            `3. 系统缺陷修复`
+          ],
+        },
+        {
+          label: '官网开发使用 Nuxt3',
+          text: [
+            `1. 使用 @nuxt/content 3.0.0 渲染文档（sqlite），`,
+            `2. 使用 view-transition-api 给主题切换添加特殊动画。`,
+            `3. 使用 Three.js 和 GLSL 给系统首页添加图片位移变形动画效果。`,
+            `4. 使用 Hono.js 和 Drizzle ORM  开发简单接口。`,
+            `5. 使用 Fuse.js 给全部文章添加检索。`,
+            `6. 开发多种文档渲染组件样式，比如 ProseCode 、 ProseImg 和一些自定义组件。`
+          ],
+        },
+      ]
+    },
+    {
       company: "南京莱斯信息技术有限公司 ",
       link: "http://www.les.cn/",
       badges: ["南京"],
@@ -117,10 +148,10 @@ export const RESUME_DATA = {
             ` 3. 使用 HTML5 Draggable 属性自定义拖拽布局及保存使用，和拖拽碰撞排序。`,
           ],
         },
-        
+
       ]
     },
-    
+
   ],
   skills: [
     "JavaScript",
@@ -195,7 +226,7 @@ export const RESUME_DATA = {
     },
     {
       title: "文章",
-      techStack: ["掘金","笔记"],
+      techStack: ["掘金", "笔记"],
       description:
         "除了放在个人网站的 /blog 模块外，还放在了掘金上",
       link: {
