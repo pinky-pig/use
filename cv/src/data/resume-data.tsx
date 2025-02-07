@@ -63,7 +63,7 @@ export const RESUME_DATA = {
       badges: ["南京"],
       title: "前端开发工程师",
       logo: ParabolLogo,
-      start: "2024/010",
+      start: "2024/10",
       end: "至今（试用期6个月）",
       description: ` 考试业务系统和其官网开发 `,
       content: [
